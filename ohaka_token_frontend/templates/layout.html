@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>{{ title }}</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/layout.css" type="text/css">
+    <script>
+    </script>
+</head>
+<body>
+    {% block content %}
+    <!-- ここにメインコンテンツを書く -->
+    {% endblock %}
+</body>
+</html>
+<script language="javascript" type="text/javascript">
+var TOKEN_ID = 0;
+
+//var contract_addr = '0xE5b23412B6eBBaB10a7Ffa5C909b368fC3a14e89';
+//var abi = [{"constant":true,"inputs":[{"name":"interfaceId","type":"bytes4"}],"name":"supportsInterface","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x01ffc9a7"},{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x06fdde03"},{"constant":true,"inputs":[{"name":"tokenId","type":"uint256"}],"name":"getApproved","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x081812fc"},{"constant":false,"inputs":[{"name":"to","type":"address"},{"name":"tokenId","type":"uint256"}],"name":"approve","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0x095ea7b3"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x18160ddd"},{"constant":false,"inputs":[{"name":"from","type":"address"},{"name":"to","type":"address"},{"name":"tokenId","type":"uint256"}],"name":"transferFrom","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0x23b872dd"},{"constant":true,"inputs":[{"name":"owner","type":"address"},{"name":"index","type":"uint256"}],"name":"tokenOfOwnerByIndex","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x2f745c59"},{"constant":false,"inputs":[{"name":"to","type":"address"},{"name":"tokenId","type":"uint256"}],"name":"mint","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0x40c10f19"},{"constant":false,"inputs":[{"name":"from","type":"address"},{"name":"to","type":"address"},{"name":"tokenId","type":"uint256"}],"name":"safeTransferFrom","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0x42842e0e"},{"constant":true,"inputs":[{"name":"index","type":"uint256"}],"name":"tokenByIndex","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x4f6ccce7"},{"constant":true,"inputs":[{"name":"tokenId","type":"uint256"}],"name":"ownerOf","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x6352211e"},{"constant":true,"inputs":[{"name":"owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x70a08231"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x8da5cb5b"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"kojinList","outputs":[{"name":"kojinName","type":"string"},{"name":"deathAge","type":"uint256"},{"name":"ohakaDirty","type":"uint256"},{"name":"ohakaCleanBlockNumber","type":"uint256"},{"name":"balance","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x955c7078"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x95d89b41"},{"constant":false,"inputs":[{"name":"account","type":"address"}],"name":"addMinter","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0x983b2d56"},{"constant":false,"inputs":[],"name":"renounceMinter","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0x98650275"},{"constant":false,"inputs":[{"name":"to","type":"address"},{"name":"approved","type":"bool"}],"name":"setApprovalForAll","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0xa22cb465"},{"constant":true,"inputs":[{"name":"account","type":"address"}],"name":"isMinter","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function","signature":"0xaa271e1a"},{"constant":false,"inputs":[{"name":"from","type":"address"},{"name":"to","type":"address"},{"name":"tokenId","type":"uint256"},{"name":"_data","type":"bytes"}],"name":"safeTransferFrom","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0xb88d4fde"},{"constant":true,"inputs":[{"name":"tokenId","type":"uint256"}],"name":"tokenURI","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function","signature":"0xc87b56dd"},{"constant":true,"inputs":[{"name":"owner","type":"address"},{"name":"operator","type":"address"}],"name":"isApprovedForAll","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function","signature":"0xe985e9c5"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor","signature":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"account","type":"address"}],"name":"MinterAdded","type":"event","signature":"0x6ae172837ea30b801fbfcdd4108aa1d5bf8ff775444fd70256b44e6bf3dfc3f6"},{"anonymous":false,"inputs":[{"indexed":true,"name":"account","type":"address"}],"name":"MinterRemoved","type":"event","signature":"0xe94479a9f7e1952cc78f2d6baab678adc1b772d936c6583def489e524cb66692"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":true,"name":"tokenId","type":"uint256"}],"name":"Transfer","type":"event","signature":"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"},{"anonymous":false,"inputs":[{"indexed":true,"name":"owner","type":"address"},{"indexed":true,"name":"approved","type":"address"},{"indexed":true,"name":"tokenId","type":"uint256"}],"name":"Approval","type":"event","signature":"0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925"},{"anonymous":false,"inputs":[{"indexed":true,"name":"owner","type":"address"},{"indexed":true,"name":"operator","type":"address"},{"indexed":false,"name":"approved","type":"bool"}],"name":"ApprovalForAll","type":"event","signature":"0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31"},{"constant":false,"inputs":[{"name":"_initOwner","type":"address"},{"name":"_kojinName","type":"string"},{"name":"_deathAge","type":"uint256"}],"name":"mintOhaka","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0xf6679424"},{"constant":true,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"getKojinData","outputs":[{"name":"","type":"string"},{"name":"","type":"uint256"},{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x6c5ec682"},{"constant":true,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"getRelation","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x8ffe6343"},{"constant":true,"inputs":[{"name":"_tokenId","type":"uint256"},{"name":"_index","type":"uint256"}],"name":"getIPFS","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function","signature":"0xa3cf4634"},{"constant":false,"inputs":[{"name":"_tokenId","type":"uint256"},{"name":"_index","type":"uint256"},{"name":"_ipfsHash","type":"string"},{"name":"_isShowOnlyFamily","type":"bool"}],"name":"setIPFS","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0x4f7713b0"},{"constant":true,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"getDirty","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x9854f70a"},{"constant":false,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"cleanOhaka","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0xda24ae5b"},{"constant":true,"inputs":[{"name":"_tokenId","type":"uint256"},{"name":"_address","type":"address"}],"name":"isFamily","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function","signature":"0xeb24a896"},{"constant":false,"inputs":[{"name":"_tokenId","type":"uint256"},{"name":"_newFamily","type":"address"}],"name":"setFamily","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0xa6f818ef"},{"constant":true,"inputs":[{"name":"_tokenId","type":"uint256"},{"name":"_address","type":"address"}],"name":"isFriend","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function","signature":"0xae563b68"},{"constant":false,"inputs":[{"name":"_tokenId","type":"uint256"},{"name":"_newFriend","type":"address"}],"name":"setFriend","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0xbdfcf2c6"},{"constant":false,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"deposit","outputs":[],"payable":true,"stateMutability":"payable","type":"function","signature":"0xb6b55f25"},{"constant":true,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"getOhakaBalance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","signature":"0xb1aa5a1a"},{"constant":false,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"withdraw","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0x2e1a7d4d"},{"constant":true,"inputs":[],"name":"getOhakaAllBalance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x93e31365"}];
+
+var contract_addr = '0x546eFa7e7076E5607Fa79719a30CD8719DE48B7E';
+var abi = [{"constant":true,"inputs":[{"name":"interfaceId","type":"bytes4"}],"name":"supportsInterface","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x01ffc9a7"},{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x06fdde03"},{"constant":true,"inputs":[{"name":"tokenId","type":"uint256"}],"name":"getApproved","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x081812fc"},{"constant":false,"inputs":[{"name":"to","type":"address"},{"name":"tokenId","type":"uint256"}],"name":"approve","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0x095ea7b3"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x18160ddd"},{"constant":false,"inputs":[{"name":"from","type":"address"},{"name":"to","type":"address"},{"name":"tokenId","type":"uint256"}],"name":"transferFrom","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0x23b872dd"},{"constant":true,"inputs":[{"name":"owner","type":"address"},{"name":"index","type":"uint256"}],"name":"tokenOfOwnerByIndex","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x2f745c59"},{"constant":false,"inputs":[{"name":"to","type":"address"},{"name":"tokenId","type":"uint256"}],"name":"mint","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0x40c10f19"},{"constant":false,"inputs":[{"name":"from","type":"address"},{"name":"to","type":"address"},{"name":"tokenId","type":"uint256"}],"name":"safeTransferFrom","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0x42842e0e"},{"constant":true,"inputs":[{"name":"index","type":"uint256"}],"name":"tokenByIndex","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x4f6ccce7"},{"constant":true,"inputs":[{"name":"tokenId","type":"uint256"}],"name":"ownerOf","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x6352211e"},{"constant":true,"inputs":[{"name":"owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x70a08231"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x8da5cb5b"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"kojinList","outputs":[{"name":"kojinName","type":"string"},{"name":"deathAge","type":"uint256"},{"name":"ohakaDirty","type":"uint256"},{"name":"ohakaCleanBlockNumber","type":"uint256"},{"name":"balance","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x955c7078"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x95d89b41"},{"constant":false,"inputs":[{"name":"account","type":"address"}],"name":"addMinter","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0x983b2d56"},{"constant":false,"inputs":[],"name":"renounceMinter","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0x98650275"},{"constant":false,"inputs":[{"name":"to","type":"address"},{"name":"approved","type":"bool"}],"name":"setApprovalForAll","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0xa22cb465"},{"constant":true,"inputs":[{"name":"account","type":"address"}],"name":"isMinter","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function","signature":"0xaa271e1a"},{"constant":false,"inputs":[{"name":"from","type":"address"},{"name":"to","type":"address"},{"name":"tokenId","type":"uint256"},{"name":"_data","type":"bytes"}],"name":"safeTransferFrom","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0xb88d4fde"},{"constant":true,"inputs":[{"name":"tokenId","type":"uint256"}],"name":"tokenURI","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function","signature":"0xc87b56dd"},{"constant":true,"inputs":[{"name":"owner","type":"address"},{"name":"operator","type":"address"}],"name":"isApprovedForAll","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function","signature":"0xe985e9c5"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor","signature":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"account","type":"address"}],"name":"MinterAdded","type":"event","signature":"0x6ae172837ea30b801fbfcdd4108aa1d5bf8ff775444fd70256b44e6bf3dfc3f6"},{"anonymous":false,"inputs":[{"indexed":true,"name":"account","type":"address"}],"name":"MinterRemoved","type":"event","signature":"0xe94479a9f7e1952cc78f2d6baab678adc1b772d936c6583def489e524cb66692"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":true,"name":"tokenId","type":"uint256"}],"name":"Transfer","type":"event","signature":"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"},{"anonymous":false,"inputs":[{"indexed":true,"name":"owner","type":"address"},{"indexed":true,"name":"approved","type":"address"},{"indexed":true,"name":"tokenId","type":"uint256"}],"name":"Approval","type":"event","signature":"0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925"},{"anonymous":false,"inputs":[{"indexed":true,"name":"owner","type":"address"},{"indexed":true,"name":"operator","type":"address"},{"indexed":false,"name":"approved","type":"bool"}],"name":"ApprovalForAll","type":"event","signature":"0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31"},{"constant":false,"inputs":[{"name":"_initOwner","type":"address"},{"name":"_kojinName","type":"string"},{"name":"_deathAge","type":"uint256"}],"name":"mintOhaka","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0xf6679424"},{"constant":true,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"getKojinData","outputs":[{"name":"","type":"string"},{"name":"","type":"uint256"},{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x6c5ec682"},{"constant":true,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"getRelation","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x8ffe6343"},{"constant":true,"inputs":[{"name":"_tokenId","type":"uint256"},{"name":"_index","type":"uint256"}],"name":"getIPFS","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function","signature":"0xa3cf4634"},{"constant":false,"inputs":[{"name":"_tokenId","type":"uint256"},{"name":"_index","type":"uint256"},{"name":"_ipfsHash","type":"string"},{"name":"_isShowOnlyFamily","type":"bool"}],"name":"setIPFS","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0x4f7713b0"},{"constant":true,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"getDirty","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x9854f70a"},{"constant":false,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"cleanOhaka","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0xda24ae5b"},{"constant":true,"inputs":[{"name":"_tokenId","type":"uint256"},{"name":"_address","type":"address"}],"name":"isFamily","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function","signature":"0xeb24a896"},{"constant":false,"inputs":[{"name":"_tokenId","type":"uint256"},{"name":"_newFamily","type":"address"}],"name":"setFamily","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0xa6f818ef"},{"constant":true,"inputs":[{"name":"_tokenId","type":"uint256"},{"name":"_address","type":"address"}],"name":"isFriend","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function","signature":"0xae563b68"},{"constant":false,"inputs":[{"name":"_tokenId","type":"uint256"},{"name":"_newFriend","type":"address"}],"name":"setFriend","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0xbdfcf2c6"},{"constant":false,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"deposit","outputs":[],"payable":true,"stateMutability":"payable","type":"function","signature":"0xb6b55f25"},{"constant":true,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"getOhakaBalance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","signature":"0xb1aa5a1a"},{"constant":false,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"withdraw","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0x2e1a7d4d"},{"constant":true,"inputs":[],"name":"getOhakaAllBalance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","signature":"0x93e31365"}];
+
+window.onload = function() { init(); }
+
+    // init
+    function init() {
+
+        // init MetaMask
+        initMetaMask();
+        connectMetaMask();
+
+        // Contract Access
+        window.contract = web3.eth.contract(abi).at(contract_addr);
+
+        // load Ohaka Data
+        getOhakaData();
+
+        // load ipfs picture 
+        for(var i = 0; i < 3; i++){
+            getIpfsData(i);
+        }
+    }
+
+    // MetaMask check
+    function initMetaMask() {
+        if (typeof window.ethereum !== 'undefined') {
+            console.log("[MetaMask拡張機能]メタマスク拡張機能が利用可能です。");
+        } else {
+            console.log("[MetaMask拡張機能]メタマスク拡張機能が見つかりません！");
+        }
+    }
+
+    // MetaMask Connect
+    async function connectMetaMask() {
+        ethereum.enable()
+        .then((accounts) => {
+            console.log("[MetaMask接続]接続しました！address[" + web3.eth.accounts[0] + "]");
+            ethereum.on('accountsChanged', (accounts) => {
+                location.reload();
+            });
+        }).catch((err) => {
+            console.log("[MetaMask接続]メタマスクとの接続に失敗しました。");
+        });
+    }
+
+    // Check Network
+    function checkMetaMaskNetwork() {
+      web3.version.getNetwork((err, netId) => {
+        switch (netId) {
+          case "1":     console.log("[ネットワーク] mainnet");                  break;
+          case "3":     console.log("[ネットワーク] Ropsten test network.");    break;
+          case "4":     console.log("[ネットワーク] Rinkeby test network.");    break;
+          case "42":    console.log("[ネットワーク] kovan test network.");      break;
+          default:      console.log("[ネットワーク] networkid=" + netId);
+        }
+      })
+    }
+
+    // async function getBlockNumber() {
+    //     await web3.eth.getBlockNumber((err, block) => {
+    //         console.log("[BLOCK数]" + block);
+    //     });
+    // }
+
+    // function soukin() {
+    //     //var to_addr = document.getElementById("text2").value;
+    //     var to_addr = "0xF33f7c2D3f38C0aB64fA7f96f8D5B9377a7a50Fe";     // 送信相手のＥＴＨアドレスをいれてね！
+    //     var eth_value = "0.005";     // 送りたいＥＴＨの量をいれてね！
+    //     console.log("[MetaMaskから送金]");
+    //     web3.eth.sendTransaction({from: web3.eth.accounts[0], to: to_addr, value: web3.toWei(eth_value, 'ether')}, (err, txHash) => {
+    //         if (!err) {
+    //             console.log('->[送信完了]: <a href="https://kovan.etherscan.io/tx/' + txHash + '" target="_blank">Etherscan(ROPSTEN)でトランザクションを確認</a>');
+    //         } else {
+    //             console.log("->[ERR]" + err);
+    //         }
+    //     });
+    // }
+
+    // get Ohaka data
+    function getOhakaData() {
+        window.contract.getKojinData.call(TOKEN_ID, (err, res) => {
+            if(!err) {
+                document.getElementById("name").innerHTML = res[0];
+                document.getElementById("age").innerHTML = res[1];
+                document.getElementById("dirty").innerHTML = res[2];
+                getRelation();
+            } else {
+                console.log("ERR: " + err);
+            }
+        });
+    }
+
+    // get Relation
+    function getRelation() {
+        window.contract.getRelation.call(TOKEN_ID, (err, res) => {
+            if(!err) {
+                var rstr = "他人";
+                switch(parseInt(res)) {
+                    case 0: rstr = "親族";  break;
+                    case 1: rstr = "友人";  break;
+                }
+                document.getElementById("relation").innerHTML = rstr;
+                getEtherBalance();
+            } else {
+                console.log("ERR: " + err);
+            }
+        });
+    }
+
+    // get Ohaka Ether balance
+    function getEtherBalance() {
+        window.contract.getOhakaBalance.call(TOKEN_ID, (err, res) => {
+            if(!err) {
+                window.eth_balance = parseInt(res);
+                document.getElementById("eth_balance").innerHTML = web3.fromWei(window.eth_balance.toString(), 'ether');
+                console.log("OhakaBalance=" + window.eth_balance);
+            } else {
+                console.log("ERR: " + err);
+            }
+        });
+    }
+    
+    // get Picture
+    function getIpfsData(index) {
+        var _index = index;
+        window.contract.getIPFS.call(TOKEN_ID, _index, (err, res) => {
+            if(!err) {
+                var url = "https://gateway.ipfs.io/ipfs/" + res;
+                console.log("実行結果：[" + url + "].");
+                var img_elem = document.getElementById("view_img_" + (_index + 1));
+                console.log(url);
+                setTimeout(function(){
+                    img_elem.src = url;
+                }, 1*1000);
+            } else {
+                console.log("ERR: " + err);
+            }
+        });
+    }
+
+    // deposit (nagesen)
+    function deposit() {
+        send_eth_value = document.getElementById("eth_size").value;
+        var wei = web3.toWei(send_eth_value, 'ether');
+        console.log("input-eth=[" + send_eth_value + "], wei=[" + wei + "]");
+        window.contract.deposit.sendTransaction(TOKEN_ID, {from: web3.eth.accounts[0], value: wei, gas:5000000}, (err, txHash) => {
+            if (!err) {
+                console.log('[送信完了]: <a href="https://kovan.etherscan.io/tx/' + txHash + '" target="_blank">Etherscan(kovan)でトランザクションを確認</a>');
+                depositWait();
+            } else {
+                console.log("->[ERR]" + err);
+            }
+        });
+    }
+
+    // send-wait popup
+    function depositWait() {
+        waitPopup();
+        setInterval(() => {
+            window.contract.getOhakaBalance.call(TOKEN_ID, (err, res) => {
+                if(!err) {
+                    if(window.eth_balance != parseInt(res)) {
+                        console.log("piyo: " + window.eth_balance + " -> " + res);
+                        location.reload();
+                    } else {
+                        //console.log("same...");
+                    }
+                } else {
+                    console.log("ERR: " + err);
+                    //location.reload();
+                }
+            });
+        }, 1*1000);
+    }
+
+    // wait popup
+    function waitPopup() {
+        var dialog = document.getElementById('d1_dialog');
+        dialog.showModal();
+    }
+
+    // withdraw
+    // 親族以外が引き出そうとした時にエラーになるが、エラー時の表示処理が未実装
+    function withdraw() {
+        window.contract.withdraw.sendTransaction(TOKEN_ID, {from: web3.eth.accounts[0], gas:5000000}, (err, txHash) => {
+            if (!err) {
+                console.log('[送信完了]: <a href="https://kovan.etherscan.io/tx/' + txHash + '" target="_blank">Etherscan(kovan)でトランザクションを確認</a>');
+                depositWait();  // 同じ処理を流用
+            } else {
+                console.log("->[ERR]" + err);
+            }
+        });
+    }
+
+    // Clening
+    function grave_cleaning() {
+        window.contract.cleanOhaka.sendTransaction(TOKEN_ID, {from: web3.eth.accounts[0], gas:5000000}, (err, txHash) => {
+            if (!err) {
+                console.log("クリーニング完了");
+                // depositWait();  // 同じ処理を流用
+            } else {
+                console.log("->[ERR]" + err);
+            }
+        });
+    }
+    
+    // test
+    function registAccount() {
+        var dialog = document.getElementById('d1_dialog');
+        dialog.showModal();
+    }
+
+</script>

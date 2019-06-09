@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 header"><span class="title-position">OhakaToken</span></div>
+        <div class="col-xs-12" style="background-color:#F2F2F2;">
+            <div class="row row-eq-height">
+                <div class="col-xs-1"></div>
+                <div class="col-xs-3" style="background-color:#FFFFFF;">
+                    <div class="profile">＜故人情報＞</div>
+                    <div class="human_detail">
+                        名前：<span id="name"></span><br>
+                        享年：<span id="age"></span>歳
+                    </div>
+                </div>
+                <div class="col-xs-4" style="background-color:#FFFFFF;">
+                    <center>
+                        <div class="main_contents">
+                            <div class="eth-count">ETH：<span id="eth_balance">0</span></div>
+                            <img id="ohaka_img" src="https://2.bp.blogspot.com/-YNJO-zt2MdQ/VEEThTILcRI/AAAAAAAAog4/ohQPYPhNEhk/s800/osoushiki_ohaka.png" width="350px" height="350px"><br>
+                            <div class="dirty_pam">汚れ具合：<span id="dirty"></span></div>
+                            <input id="cleaning" type="button" value="きれいにする" class="btn btn-primary cleaning-button" onclick="grave_cleaning();">
+                        </div>
+                    </center>
+                </div>
+                <div class="col-xs-3" style="background-color:#FFFFFF;">
+                    <div class="main_contents">
+                        <div class="add-human padding-form">あなたの関係は<font size="+3" color="red"><span id="relation"></span></font></div>
+                        <span class="padding-form"><input id="eth_size" class="form-control" type="number" size="25" placeholder="金額"></span><br>
+                        <input id="throw_eth" type="button" value="投げ銭する" class="btn btn-primary button-size" onclick="deposit();">
+                        <input id="pull_eth" type="button" value="全額引き出し" class="btn btn-warning button-size" onclick="withdraw();">
+                    </div>
+                </div>
+                <div class="col-xs-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-1"></div>
+                <div class="col-xs-10" style="background-color:#FFFFFF;">
+                    <center>
+                        <p class="img-lib">フォトライブラリー</p>
+                        <div class="row">
+                            <div class="col-xs-4"><p class="waku01"><img id="view_img_1" src="http://icon-park.com/imagefiles/loading7_orange.gif" width="200px" height="200px"></p></div>
+                            <div class="col-xs-4"><p class="waku01"><img id="view_img_2" src="http://icon-park.com/imagefiles/loading7_orange.gif" width="200px" height="200px"></p></div>
+                            <div class="col-xs-4"><p class="waku01"><img id="view_img_3" src="http://icon-park.com/imagefiles/loading7_orange.gif" width="200px" height="200px"></p></div>
+                        </div>
+                        <div class="main_contents upload_file">
+                            <hr class="upload-border">
+                            <b style="font-size: 18px">画像アップロード</b><br>
+                            <input id="upload_file" type="button" value="ファイルを選択する" class="btn disable_color" disabled>
+                        </div>
+                    </center>
+                </div>
+                <div class="col-xs-1"></div>
+            </div>
+            <div class="row row-eq-height">
+                <div class="col-xs-1"></div>
+                <div class="col-xs-7" style="background-color:#FFFFFF;"></div>
+                <div class="col-xs-3 padding-bottom" style="background-color:#FFFFFF;">
+                    <dialog id="d1_dialog"><p>- OhakaToken -</p><p>お待ち下さい</p>
+                        <div>待機中</div>
+                        <div><progress></progress></div>
+                    </dialog>
+                    <center>
+                        <div class="select-id">
+                            <span class="add-human">IDの選択：</span>
+                            <select name="ohaka-id" id="ohaka_id" size="1">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                        <div class="add-human">親族・友人の追加</div><br>
+                        <div><input id="add_relation" class="" type="text" size="30" placeholder=""></div><br>
+                        <input id="add_family" type="button" value="親族を追加する" class="btn btn-primary button-size" onclick="registAccount();">
+                        <input id="add_friend" type="button" value="友人を追加する" class="btn btn-warning button-size" onclick="registAccount();">
+                    </center>
+                </div>
+                <div class="col-xs-1"></div>
+            </div>
+            <div class="col-xs-12"></div>
+        </div>
+        <div class="col-xs-12 footer">フッター</div>
+    </div>
+</div>
+
+{% endblock %}
